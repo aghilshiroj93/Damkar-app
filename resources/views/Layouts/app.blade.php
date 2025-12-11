@@ -266,22 +266,31 @@
 
                     {{-- Logout --}}
                     <div class="menu-item px-4">
-                        <div
-                            class="menu-hover-effect flex items-center gap-3 px-4 py-3 rounded-xl cursor-pointer
-                            text-red-600 hover:bg-gradient-to-r hover:from-red-50 hover:to-pink-50 transition-all duration-300 transform hover:scale-[1.02]">
-                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M17 16l4-4m0 0l-4-4m4 4H7" />
-                            </svg>
-                            <span class="text-sm font-medium">Logout</span>
-                            <div class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
-                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit"
+                                class="menu-hover-effect flex items-center w-full gap-3 px-4 py-3 rounded-xl cursor-pointer
+            text-red-600 hover:bg-gradient-to-r hover:from-red-50 hover:to-pink-50 transition-all duration-300 transform hover:scale-[1.02]">
+
+                                {{-- Icon kiri --}}
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M17 16l4-4m0 0l-4-4m4 4H7" />
                                 </svg>
-                            </div>
-                        </div>
+
+                                <span class="text-sm font-medium">Logout</span>
+
+                                {{-- Icon kanan muncul saat hover --}}
+                                <div class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </div>
+                            </button>
+                        </form>
                     </div>
+
                 </nav>
 
                 {{-- User info dengan gradient --}}
@@ -446,7 +455,7 @@
                             Fire Response System</span>
                     </div>
                     <div class="flex items-center gap-4 text-xs">
-                        <span class="text-gray-500">Dibuat dengan ❤️ oleh Bro Agil</span>
+                        <span class="text-gray-500">PKL DAMKAR 2025</span>
                         <div class="flex items-center gap-2">
                             <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                             <span>Status: <span class="font-semibold text-green-600">Online</span></span>
